@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h2 class="logo">Anye Prince Kelly Nji</h2>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about" class="about-link">about</a></li>
+                <li><a href="#skills" class="skills-link">skills</a></li>
+                <li><a href="#projects" class="projects-link">project</a></li>
+                <li><a href="#contact" class="contact-link">contact</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <nav class="sidebar" aria-label="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">project</a></li>
+                <li><a href="#contact" class="contact-link">contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger"><div class="bar"></div></button>
+    </nav>
+    <main>
+        <div>
+            <div class="about-me" id="about">
+                <h2>About Me</h2>
+                <p> I am a computer Engineering student at NAHPI, school of Engineering,
+                    I am a full stack developer at ZionInovation and a Backend developer
+                    at Traitz. I am a machine learning scholar for AWS and Microsoft student 
+                    learn Ambassador.
+                </p>
+                <ul  class="contact-info">
+                    <li>example@gmail.com</li>
+                    <li>+12000000</li>
+                    <li>address, Country</li>
+                </ul>
+            </div>
+            <div class="skills" id="skills">
+                <h2 id="btn-skills">Skills</h2>
+                <ul id="skills-info">
+                    <li>Web Developement and Maintainance</li>
+                    <li>Machine learning</li>
+                    <li>Building AI</li>
+                    <li>API building and Management</li>
+                </ul>
+            </div>
+        </div>
+        <div class="projects" id="projects">
+            <h2>Projects</h2>
+            <section>
+                <div class="project">
+                    <span>project title: Gemini446</span>
+                    <img src="/image1.png" alt="image" title="Gemini446">
+                </div>
+                <div class="project">
+                    <span>project title: SmartAgroConnect</span>
+                    <img src="/image2.png" alt="image" title="SmartAgroConnect" />
+                </div>
+                <div class="project">
+                    <span>project title: Gemini446</span>
+                    <img src="/image1.png" alt="image" title="Gemini446">
+                </div>
+                <div class="project">
+                    <span>project title: SmartAgroConnect</span>
+                    <img src="/image2.png" alt="image" title="SmartAgroConnect" />
+                </div>
+            </section>
+        </div>
+        <div id="contact">
+            <h2>Please leave a message below</h2>
+            <form action="" class="contact-form">
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="enter your email" required autocomplete>
+                </div>
+                <div>
+                    <label for="maessage">Message</label>
+                    <textarea name="message" id="message" required autocomplete=""></textarea>
+                </div>
+                <button type="submit" class="btn-contact">submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

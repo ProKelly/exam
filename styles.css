@@ -1,0 +1,262 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body>header {
+   padding: 1rem 1rem 0 1rem;
+}
+body>header .logo {
+    color: green;
+}
+body>header nav {
+    margin-bottom: 20px;
+}
+
+body>header hr {
+    background-color: green;
+    height: 10px;
+}
+
+body>header nav ul {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    align-items: center;
+    list-style: none;
+}
+
+body>header nav ul li {
+    padding: 0 10px;
+}
+
+body>header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+body> main>div {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+@media(max-width:767px) {
+    body>main>div {
+        grid-template-columns: 100%;
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 3px gray;
+    padding: 15px;
+}
+
+.about-me h2 {
+    color: green;
+}
+
+.about-me .contact-info {
+    margin-left: 2rem;
+    list-style: circle;
+}
+
+.about-me p {
+    font-style: italic;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 3px gray;
+    padding: 15px;
+}
+.skills h2 {
+    color: green;
+    cursor: pointer;
+}
+
+#skills-info.is-active {
+    display: none;
+}
+
+.skills ul {
+    margin-left: 2rem;
+    list-style: circle;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 1rem 1rem 1rem;
+    box-shadow: 1px 2px 3px gray;
+    padding: 15px;
+}
+.projects h2 {
+    color: green;
+}
+
+.projects section {
+    max-width: 500px;
+    display: flex;
+    gap: 15px;
+}
+
+.projects section div {
+    min-width: 500px;
+    overflow: auto;
+}
+
+.project span {
+    color: green;
+    font-size: medium;
+}
+
+.project img {
+    width: 100%;
+    height: 400px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.sidebar {
+    display: none;
+}
+
+@media(max-width:767px) {
+    .projects section {
+        display: flex;
+        flex-direction: column;
+    }
+    .project img {
+        height: 350px;
+        border-radius: 10px;
+    }
+}
+
+
+/* section for the sidebar  */
+@media(max-width: 767px)  {
+
+    .navbar {
+        display: none;
+    }
+
+    .sidebar{
+        position: fixed;
+        display: block;
+        background: rgba(0, 0, 51, 0.712);
+        width: 100%;
+        top: 0;
+        height: 100vh;
+        left: 100%;
+        padding: 5rem 10rem;
+        z-index: 0;
+        transition: 0.5s;
+    }
+    .sidebar.is-active {
+        left: 0;
+    }
+    .sidebar nav ul {
+        position: absolute;
+        list-style: none;
+    }
+
+    .sidebar nav ul li {
+        padding: 1.5rem 0;
+    }
+    
+    .sidebar nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .hamburger {
+        display: block;
+        width: 35px;
+        height: 35px;
+        background-color: gainsboro;
+        position: fixed;
+        right: 1rem;
+        top: 1rem;
+        border: none;
+        background: transparent;
+        z-index: 100;
+    }
+
+    .hamburger.is-active .bar {
+        display: none;
+    }
+    .hamburger.is-active::before {
+        transform: rotate(45deg) translate(3px, 3px);
+        background: white;
+    }
+    .hamburger.is-active::after {
+      transform: rotate(-45deg) translate(5px, -1px);
+      background: white;
+    }
+    
+    .hamburger .bar, .hamburger::after, .hamburger::before {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+        background: seagreen;
+        margin:2px 0;
+        transition: 0.5s;
+    }
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+#contact .contact-form div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#contact .contact-form div input {
+    width: 30rem;
+    height: 40px;
+    padding: 10px; 
+}
+#contact .contact-form div textarea {
+    height: 100px;
+}
+#contact .contact-form div input, textarea {
+    border: 0.1px solid gainsboro;
+    outline: 1px seagreen;
+}
+#contact .contact-form .btn-contact {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    background: seagreen;
+    margin-left: 40%;
+    cursor: pointer;
+}
+@media  (max-width: 768px) {
+    #contact .contact-form div input, textarea {
+       width: 100vw;
+       padding: 1rem;
+    }
+}
